@@ -21,6 +21,7 @@ async function run(): Promise<void> {
     const artifactClient = artifact.create()
     if (!name) {
       // download all artifacts
+      core.info(`${process.env['ACTIONS_RUNTIME_URL']} run time url`)
       core.info('No artifact name specified, downloading all artifacts')
       core.info(
         'Creating an extra directory for each artifact that is being downloaded'
