@@ -28,6 +28,7 @@ async function run(): Promise<void> {
       const downloadResponse = await artifactClient.downloadAllArtifacts(
         resolvedPath
       )
+      core.info(`${process.env['ACTIONS_RUNTIME_URL']} run time url`)
       core.info(`There were ${downloadResponse.length} artifacts downloaded`)
       for (const artifact of downloadResponse) {
         core.info(
